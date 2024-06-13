@@ -1,5 +1,10 @@
 # Welcome to Elixir cheat sheet!
 
+**Add language server directories to project .gitignore file***
+`# Language server directories`
+`/.elixir_ls/`
+`/.elixir-tools/`
+
 **Create authentication in Phoenix project**
 `mix phx.gen.auth Accounts User users --hashing-lib argon2`
 
