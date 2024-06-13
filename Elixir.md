@@ -13,3 +13,5 @@
 
 **Then you just need to run `mix compile` or `mix compile --force` as usual and unused hints will be added to the end of the output.**
 
+**Run `mix hex.audit` after adding a dependency or from time to time to check for retired hex package***
+
