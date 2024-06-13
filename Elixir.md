@@ -11,3 +11,5 @@
 **After installation you need to add `:unused` as a compiler to the list of Mix compilers in `project` function**
 `compilers: [:unused] ++ Mix.compilers()`
 
+**Then you just need to run `mix compile` or `mix compile --force` as usual and unused hints will be added to the end of the output.**
+
