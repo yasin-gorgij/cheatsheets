@@ -8,6 +8,14 @@
 
 `/.elixir-tools/`
 
+**Change generator setion of config.ex file to use binary_id and utc_datetime_usec:**
+`
+generators: [
+    binary_id: true,
+    timestamp_type: :utc_datetime_usec
+  ]
+`
+
 **Create authentication in Phoenix project:**
 `mix phx.gen.auth Accounts User users --hashing-lib argon2`
 
