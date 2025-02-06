@@ -17,7 +17,7 @@ generators: [
 `
 
 **Create authentication in Phoenix project:**
-`mix phx.gen.auth Accounts User users --hashing-lib argon2`
+`mix phx.gen.auth Accounts User users --live --hashing-lib argon2`
 
 **Add common dependencies**
 
