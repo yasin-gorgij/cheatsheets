@@ -17,7 +17,7 @@ generators: [
 `
 
 **Create authentication in Phoenix project:**
-`mix phx.gen.auth Accounts User users --live --hashing-lib argon2`
+`mix phx.gen.auth Accounts User users --live --binary-id --hashing-lib argon2`
 
 **Add common dependencies**
 
@@ -32,3 +32,16 @@ generators: [
 **Then you just need to run `mix compile` or `mix compile --force` as usual and unused hints will be added to the end of the output.**
 
 **Run `mix hex.audit` after adding a dependency or from time to time to check for retired hex package***
+
+**Releasing a Phoenix Application**
+
+`
+mix phx.gen.secret
+REALLY_LONG_SECRET
+export SECRET_KEY_BASE=REALLY_LONG_SECRET
+export DATABASE_URL=ecto://USER:PASS@HOST/database
+`
+
+`
+mix deps.get --only prod && MIX_ENV=prod mix compile && MIX_ENV=prod mix assets.deploy && mix phx.gen.release && MIX_ENV=prod mix release
+`
