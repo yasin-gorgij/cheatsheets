@@ -8,6 +8,9 @@
 
 `/.elixir-tools/`
 
+**Create a new project:**
+`mix phx.new mahi --binary-id --install --no-gettext`
+
 **Change generator setion of config.ex file to use binary_id and utc_datetime_usec:**
 `
 generators: [
